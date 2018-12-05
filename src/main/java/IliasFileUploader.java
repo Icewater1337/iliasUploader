@@ -98,7 +98,7 @@ public class IliasFileUploader {
                 if ( fileToUpload.getName().contains("_ok")){
                     passedSelect.selectByIndex(1);
                 } else if ( fileToUpload.getName().contains("_nok")){
-                    passedSelect.selectByIndex(0);
+                    passedSelect.selectByIndex(2);
                 }
                 setBestanden = true;
 
