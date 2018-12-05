@@ -95,7 +95,11 @@ public class IliasFileUploader {
             File fileToUpload = FileReader.returnFileIfContainedIn(files, lastName);
             if (fileToUpload != null) {
                 Select passedSelect = new Select(columnsOfRow.get(5).findElement(By.tagName("select")));
-                passedSelect.selectByIndex(1);
+                if ( fileToUpload.getName().contains("_ok")){
+                    passedSelect.selectByIndex(1);
+                } else if ( fileToUpload.getName().contains("_nok")){
+                    passedSelect.selectByIndex(0);
+                }
                 setBestanden = true;
 
 
