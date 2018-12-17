@@ -28,7 +28,8 @@ public class IliasFileUploader {
 
         driver.get(Constants.courseLink);
 
-        driver.get(Constants.courseExerciseLink);
+        //driver.get(Constants.courseExerciseLink);
+        driver.get(Constants.courseStLink);
 
         Select assignments = new Select(driver.findElement(By.id("ass_id")));
         assignments.selectByVisibleText(args[2].replace("_", " "));
